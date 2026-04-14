@@ -1,0 +1,112 @@
+{
+  "startups": [
+    {
+      "id": 1,
+      "name": "Darwinbox",
+      "shortDesc": "Enterprise HR software processing 500M+ data points with Agentic AI.",
+      "description": "Darwinbox is a cloud-based human resource management software provider based in Hyderabad. Reaching Unicorn status, it raised over $307M and its new Agentic AI platform is revolutionizing enterprise workflows.",
+      "founder": "Chaitanya Peddi, Jayant Paleti, Rohit Chennamaneni",
+      "category": "SaaS",
+      "website": "https://darwinbox.com/",
+      "isFeatured": true,
+      "logo": "https://ui-avatars.com/api/?name=DB&background=10b981&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Skyroot Aerospace",
+      "shortDesc": "Leading India's private space tech. Launched Vikram-S.",
+      "description": "Founded by former ISRO scientists, Skyroot launched India's first private rocket. Ranked #1 in LinkedIn's Top Startups Hyderabad 2025, they recently raised ₹100 crore from BlackRock.",
+      "founder": "Pawan Kumar Chandana, Naga Bharath Daka",
+      "category": "DeepTech",
+      "website": "https://skyroot.in/",
+      "isFeatured": true,
+      "logo": "https://ui-avatars.com/api/?name=SA&background=2563eb&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Zenoti",
+      "shortDesc": "All-in-one software for salons and spas.",
+      "description": "Zenoti is a SaaS Unicorn ($1.5B+ valuation) providing cloud-based software for spas, salons, and medspas to manage all aspects of their business globally.",
+      "founder": "Sudheer Koneru",
+      "category": "SaaS",
+      "website": "https://www.zenoti.com/",
+      "isFeatured": false,
+      "logo": "https://ui-avatars.com/api/?name=Z&background=ec4899&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 4,
+      "name": "HighRadius",
+      "shortDesc": "Fintech software for autonomous accounts receivable.",
+      "description": "HighRadius is a Fintech Unicorn offering AI-driven order-to-cash and treasury management software designed to automate complex financial processes.",
+      "founder": "Sashi Narahari",
+      "category": "FinTech",
+      "website": "https://www.highradius.com/",
+      "isFeatured": true,
+      "logo": "https://ui-avatars.com/api/?name=HR&background=f59e0b&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Recykal",
+      "shortDesc": "Digital platforms mapping India's waste management.",
+      "description": "A prominent CleanTech/UrbanTech startup recognized as a top LinkedIn startup for driving circular economy solutions in India.",
+      "founder": "Abhay Deshpande",
+      "category": "Other",
+      "website": "https://recykal.com/",
+      "isFeatured": false,
+      "logo": "https://ui-avatars.com/api/?name=RK&background=84cc16&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 6,
+      "name": "BrightChamps",
+      "shortDesc": "Next-gen life skills for kids.",
+      "description": "BrightChamps is a highly-valued EdTech soonicorn valued at ~$650M that teaches kids essential tech skills like coding, financial literacy, and AI.",
+      "founder": "Ravi Bhushan",
+      "category": "EdTech",
+      "website": "https://brightchamps.com/",
+      "isFeatured": false,
+      "logo": "https://ui-avatars.com/api/?name=BC&background=8b5cf6&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 7,
+      "name": "Credgenics",
+      "shortDesc": "Fintech AI for digitizing loan collections.",
+      "description": "A leading AI-powered debt resolution and legal automation platform. Valued around $340M as a fast-emerging soonicorn out of the Hyderabad financial ecosystem.",
+      "founder": "Rishabh Goel, Anand Agrawal",
+      "category": "AI",
+      "website": "https://www.credgenics.com/",
+      "isFeatured": true,
+      "logo": "https://ui-avatars.com/api/?name=CG&background=6366f1&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 8,
+      "name": "neturen",
+      "shortDesc": "kjrfkjrefjpkewjfkneklnfpirufkj,er",
+      "description": "jrjgpfowejljf;,edmf4jgklmel;jgpi42ukn 3rrkjfuiywu jhbfioh2ei384 jhefuy93yr j3o3ryjekfoiuwurthebfkulehwjf heihfidjfohwuytqqb;qp3mrjg  bfupqjnfmnbq'ouhdakjhkhdkfkjsdfjkdsj  jskdjgk jhghoiwe hd djhboie sjhgoih ewkjbgouew jbdohe jbgf bkjwbf n efbe bef",
+      "founder": "nidhi shuikla",
+      "category": "AI",
+      "website": "https:/hgsyegcfhecne/fhcjeb",
+      "isFeatured": false,
+      "logo": "https://ui-avatars.com/api/?name=neturen&background=random&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 9,
+      "name": "port",
+      "shortDesc": "ygfuhgjkb jhgihb ",
+      "description": "kjhlk,n mnbkjhb mnbkjb knbkjh",
+      "founder": "nishru",
+      "category": "AI",
+      "website": "https://nidhishukla.online/",
+      "isFeatured": false,
+      "logo": "https://ui-avatars.com/api/?name=port&background=random&color=fff&size=128",
+      "cover": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}

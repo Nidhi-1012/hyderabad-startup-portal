@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Detail - Hyderabad Startup Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="antialiased text-gray-800 flex flex-col min-h-screen bg-gray-50">
+
+  <!-- Navbar -->
+  <header class="fixed w-full top-0 z-50 glass-panel border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <i class="ph-fill ph-rocket-launch text-indigo-600 text-3xl"></i>
+          <span class="font-bold text-2xl tracking-tight text-gray-900" style="font-family: 'Outfit', sans-serif;">HydStartups.</span>
+        </a>
+        <nav class="hidden md:flex gap-8">
+          <a href="index.html" class="text-gray-500 hover:text-indigo-600 font-medium transition-colors">Home</a>
+          <a href="startups.html" class="text-indigo-600 font-medium">Startups</a>
+          <a href="login.html" class="text-gray-500 hover:text-indigo-600 font-medium transition-colors">Login</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-20 pb-20">
+    <div id="loader" class="flex justify-center items-center h-64">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+    </div>
+    
+    <div id="errorState" class="hidden text-center py-32 max-w-2xl mx-auto">
+      <i class="ph ph-warning-circle text-6xl text-red-500 mb-4 inline-block"></i>
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">Startup Not Found</h1>
+      <p class="text-gray-500 mb-8">The startup you are looking for does not exist or has been removed.</p>
+      <a href="startups.html" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition">Go back to Startups</a>
+    </div>
+
+    <!-- Content Rendering Area -->
+    <div id="detailContent" class="hidden">
+      <!-- Populated by JS -->
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+      © 2026 Hyderabad Startup Portal.
+    </div>
+  </footer>
+
+  <script>
+    // Helper to provide nice category badge colors
+    const getCategoryColor = (category) => {
+      const colors = {
+        DeepTech: 'bg-blue-100 text-blue-800 border-blue-200',
+        SaaS: 'bg-green-100 text-green-800 border-green-200',
+        FinTech: 'bg-yellow-100 text-yellow-800 border-yellow-200',
+        AI: 'bg-purple-100 text-purple-800 border-purple-200',
+        EdTech: 'bg-indigo-100 text-indigo-800 border-indigo-200'
+      };
+      return colors[category] || 'bg-gray-100 text-gray-800 border-gray-200';
+    };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const startupId = parseInt(urlParams.get('id'));
+
+      const loader = document.getElementById('loader');
+      const detailContent = document.getElementById('detailContent');
+      const errorState = document.getElementById('errorState');
+
+      let startup = null;
+      try {
+        const response = await fetch(`/api/startups/${startupId}`);
+        if(response.ok) {
+          startup = await response.json();
+        }
+      } catch(e) {
+        console.error(e);
+      }
+
+      loader.classList.add('hidden'); // Hide loader
+
+      if(!startup) {
+        errorState.classList.remove('hidden');
+        return;
+      }
+
+      // Update Title
+      document.title = `${startup.name} - Hyderabad Startup Portal`;
+
+      // Render content dynamically
+      detailContent.classList.remove('hidden');
+      detailContent.innerHTML = `
+        <!-- Cover Section -->
+        <div class="w-full h-80 relative bg-gray-900">
+          <img src="${startup.cover}" alt="Cover" class="w-full h-full object-cover opacity-70">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          
+          <div class="absolute bottom-0 w-full transform translate-y-1/2">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="flex items-end gap-6">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-4 border-white bg-white shadow-xl flex-shrink-0 relative group">
+                  <img src="${startup.logo}" alt="Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="mb-4 text-white flex-grow pt-10">
+                  <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-2 drop-shadow-md text-gray-900 mt-16 md:mt-0 md:text-white" style="font-family: 'Outfit';">
+                    ${startup.name}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Body -->
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 md:mt-16">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- Left col: Info -->
+            <div class="lg:col-span-2 space-y-10">
+              <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <i class="ph-fill ph-info text-indigo-500"></i> About
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                  ${startup.description}
+                </p>
+              </section>
+
+              <section class="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100">
+                <h3 class="text-lg font-bold text-indigo-900 mb-2">Quote from the team</h3>
+                <p class="text-indigo-700 italic">"Our mission is to continually push boundaries in ${startup.category}."</p>
+              </section>
+            </div>
+
+            <!-- Right col: Sidebar Box -->
+            <div class="lg:col-span-1">
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-28">
+                
+                <h3 class="font-bold text-gray-900 mb-6 text-xl">Details</h3>
+                
+                <div class="space-y-5">
+                  <div>
+                    <div class="text-sm font-medium text-gray-500 mb-1 flex items-center gap-1">
+                      <i class="ph ph-tag"></i> Category
+                    </div>
+                    <span class="inline-flex px-3 py-1 rounded-full text-sm font-semibold border ${getCategoryColor(startup.category)}">
+                      ${startup.category}
+                    </span>
+                  </div>
+
+                  <div>
+                    <div class="text-sm font-medium text-gray-500 mb-1 flex items-center gap-1">
+                      <i class="ph ph-user"></i> Founder(s)
+                    </div>
+                    <div class="text-gray-900 font-medium">
+                      ${startup.founder}
+                    </div>
+                  </div>
+
+                  <div class="pt-6 border-t border-gray-100">
+                    <a href="${startup.website}" target="_blank" class="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-xl font-semibold transition-colors shadow-lg shadow-indigo-600/20">
+                      Visit Website <i class="ph-bold ph-arrow-square-out"></i>
+                    </a>
+                    
+                    <button class="w-full mt-3 flex items-center justify-center gap-2 border border-gray-200 hover:bg-gray-50 text-gray-700 py-3 rounded-xl font-semibold transition-colors heart-btn">
+                      <i class="ph-bold ph-heart text-gray-400 heart-icon transition-colors"></i> Save to Favorites
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+      // bind heart button logic
+      const heartBtn = document.querySelector('.heart-btn');
+      heartBtn.addEventListener('click', (e) => {
+        const icon = heartBtn.querySelector('.heart-icon');
+        icon.classList.toggle('ph-fill');
+        icon.classList.toggle('text-red-500');
+        if(icon.classList.contains('text-red-500')){
+           heartBtn.innerHTML = `<i class="ph-fill ph-heart text-red-500 heart-icon transition-colors"></i> Saved`;
+        } else {
+           heartBtn.innerHTML = `<i class="ph-bold ph-heart text-gray-400 heart-icon transition-colors"></i> Save to Favorites`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

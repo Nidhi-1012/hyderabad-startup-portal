@@ -1,0 +1,41 @@
+import { Startup } from '../types';
+
+export const sampleStartups: Startup[] = [
+  { name: "Skyroot Aerospace", founderName: "Pawan Kumar Chandana, Naga Bharath Daka", about: "India's first private space launch provider.", websiteUrl: "https://www.skyroot.in/", industry: "AI & Deep Tech", foundedYear: 2018, fundingStage: "Series A+", status: "approved" },
+  { name: "Dhruva Space", founderName: "Sanjay Nekkanti", about: "Full-stack space engineering solutions.", websiteUrl: "https://www.dhruvaspace.com/", industry: "AI & Deep Tech", foundedYear: 2012, fundingStage: "Series A+", status: "approved" },
+  { name: "Darwinbox", founderName: "Chaitanya Peddi, Jayant Paleti, Rohit Chennamaneni", about: "Enterprise HRTech platform. Unicorn status.", websiteUrl: "https://darwinbox.com/", industry: "SaaS", foundedYear: 2015, fundingStage: "Series A+", status: "approved" },
+  { name: "Keka HR", founderName: "Vijay Yalamanchili", about: "HR software for SMEs.", websiteUrl: "https://www.keka.com/", industry: "SaaS", foundedYear: 2015, fundingStage: "Series A+", status: "approved" },
+  { name: "HighRadius", founderName: "Sashi Narahari", about: "Finance automation platform.", websiteUrl: "https://www.highradius.com/", industry: "SaaS", foundedYear: 2006, fundingStage: "Series A+", status: "approved" },
+  { name: "NxtWave", founderName: "Rahul Attuluri", about: "IT & coding skills education platform.", websiteUrl: "https://www.ccbp.in/", industry: "Others", foundedYear: 2020, fundingStage: "Series A+", status: "approved" },
+  { name: "Bhanzu", founderName: "Neelakantha Bhanu Prakash", about: "Math learning platform.", websiteUrl: "https://bhanzu.com/", industry: "Others", foundedYear: 2020, fundingStage: "Series A+", status: "approved" },
+  { name: "MedPlus", founderName: "Madhukar Gangadi", about: "Pharmacy chain and health services.", websiteUrl: "https://www.medplusindia.com/", industry: "Healthtech", foundedYear: 2006, fundingStage: "Series A+", status: "approved" },
+  { name: "eKincare", founderName: "Kiran Kalakuntla", about: "Corporate wellness & health platform.", websiteUrl: "https://www.ekincare.com/", industry: "Healthtech", foundedYear: 2014, fundingStage: "Series A+", status: "approved" },
+  { name: "Recykal", founderName: "Abhay Deshpande", about: "Waste management & recycling technology.", websiteUrl: "https://www.recykal.com/", industry: "Others", foundedYear: 2016, fundingStage: "Series A+", status: "approved" },
+  { name: "Freyr Energy", founderName: "Saurabh Marda", about: "Solar energy solutions.", websiteUrl: "https://freyrenergy.com/", industry: "Others", foundedYear: 2014, fundingStage: "Series A+", status: "approved" },
+  { name: "UrbanKisaan", founderName: "Vihari Kanukollu", about: "Hydroponics & modern farming technology.", websiteUrl: "https://www.urbankisaan.com/", industry: "Others", foundedYear: 2017, fundingStage: "Seed", status: "approved" },
+  { name: "Kheyti", founderName: "Kaushik Kappagantulu", about: "Greenhouse technology for small farmers.", websiteUrl: "https://www.kheyti.com/", industry: "Others", foundedYear: 2015, fundingStage: "Seed", status: "approved" },
+  { name: "KFin Technologies", founderName: "Venkata Satya M", about: "Financial services platform.", websiteUrl: "https://www.kfintech.com/", industry: "Fintech", foundedYear: 2017, fundingStage: "Series A+", status: "approved" },
+  { name: "Zaggle", founderName: "Raj N Phani", about: "Prepaid & spend management.", websiteUrl: "https://www.zaggle.in/", industry: "Fintech", foundedYear: 2011, fundingStage: "Series A+", status: "approved" },
+  { name: "Landeed", founderName: "Sanjay Mandava", about: "Land & property records platform (YC-backed).", websiteUrl: "https://www.landeed.com/", industry: "Others", foundedYear: 2022, fundingStage: "Seed", status: "approved" },
+  { name: "Zenoti", founderName: "Sudheer Koneru", about: "Global cloud platform for salons & spas.", websiteUrl: "https://www.zenoti.com/", industry: "SaaS", foundedYear: 2010, fundingStage: "Series A+", status: "approved" },
+  
+  // New ones from user
+  { name: "Dodla Dairy", founderName: "Dodla Sunil Reddy", about: "Dairy & food products.", websiteUrl: "https://dodladairy.com/", industry: "Others", foundedYear: 1995, fundingStage: "Series A+", status: "approved" },
+  { name: "SFarmsIndia", founderName: "Koteswara Rao Lingam", about: "Agri land platform.", websiteUrl: "https://sfarmsindia.com/", industry: "Others", foundedYear: 2018, fundingStage: "Seed", status: "approved" },
+  { name: "Marut Drones", founderName: "Prem Kumar Vislawath", about: "Agri drones.", websiteUrl: "https://marutdrones.com/", industry: "Others", foundedYear: 2019, fundingStage: "Seed", status: "approved" },
+  { name: "CredRight", founderName: "Neeraj Bansal", about: "Lending for businesses.", websiteUrl: "https://www.credright.com/", industry: "Fintech", foundedYear: 2016, fundingStage: "Series A+", status: "approved" },
+  { name: "Actlogica", founderName: "Arijit Sen", about: "FinTech solutions.", websiteUrl: "https://actlogica.com/", industry: "Fintech", foundedYear: 2018, fundingStage: "Seed", status: "approved" },
+  { name: "Paymatrix", founderName: "Mukesh Chandra", about: "FinTech.", websiteUrl: "https://paymatrix.in/", industry: "Fintech", foundedYear: 2016, fundingStage: "Seed", status: "approved" },
+  { name: "ChitMonks", founderName: "Pavan Ponnaganti", about: "FinTech Chit funds.", websiteUrl: "https://www.chitmonks.com/", industry: "Fintech", foundedYear: 2018, fundingStage: "Seed", status: "approved" },
+  { name: "Wehouse", founderName: "Sravan Kumar", about: "Construction Tech.", websiteUrl: "https://www.wehouse.in/", industry: "Others", foundedYear: 2017, fundingStage: "Seed", status: "approved" },
+  { name: "FreshBus", founderName: "Sudhakar Reddy", about: "Electric buses.", websiteUrl: "https://www.freshbus.com/", industry: "Others", foundedYear: 2022, fundingStage: "Seed", status: "approved" },
+  { name: "ADAPT MOTORS", founderName: "Adapt Team", about: "Smart mobility.", websiteUrl: "https://adaptmotors.com/", industry: "Others", foundedYear: 2018, fundingStage: "Seed", status: "approved" },
+  { name: "Cyrrup Solutions", founderName: "Gaurav Kumar", about: "Mobility solutions.", websiteUrl: "https://www.cyrrup.com/", industry: "Others", foundedYear: 2016, fundingStage: "Seed", status: "approved" },
+  { name: "WhistleDrive", founderName: "Rakesh Munnanooru", about: "Mobility solutions.", websiteUrl: "https://www.whistledrive.com/", industry: "Others", foundedYear: 2016, fundingStage: "Series A+", status: "approved" },
+  { name: "Perceptyne", founderName: "Raviteja Dodda", about: "Humanoid robots.", websiteUrl: "https://www.perceptyne.com/", industry: "AI & Deep Tech", foundedYear: 2020, fundingStage: "Seed", status: "approved" },
+  { name: "BlueSemi", founderName: "Sunil Kumar", about: "Health-tech chips.", websiteUrl: "https://www.bluesemi.io/", industry: "Healthtech", foundedYear: 2017, fundingStage: "Seed", status: "approved" },
+  { name: "NextBillion AI", founderName: "Gaurav Bubna", about: "AI map solutions.", websiteUrl: "https://nextbillion.ai/", industry: "AI & Deep Tech", foundedYear: 2020, fundingStage: "Series A+", status: "approved" },
+  { name: "Zen Technologies", founderName: "Ashok Atluri", about: "Defense & simulation.", websiteUrl: "https://www.zentechnologies.com/", industry: "AI & Deep Tech", foundedYear: 1993, fundingStage: "Series A+", status: "approved" },
+  { name: "Donatekart", founderName: "Anil Kumar Reddy", about: "Crowdfunding social causes.", websiteUrl: "https://www.donatekart.com/", industry: "Others", foundedYear: 2016, fundingStage: "Seed", status: "approved" },
+  { name: "Swipe", founderName: "Aditya Vemuganti", about: "Consumer SaaS.", websiteUrl: "https://getswipe.in/", industry: "SaaS", foundedYear: 2020, fundingStage: "Seed", status: "approved" }
+];
